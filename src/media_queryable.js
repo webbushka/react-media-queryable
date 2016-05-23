@@ -27,7 +27,9 @@ module.exports = React.createClass({
     }
 
     var renderedChildren = React.Children.map(this.props.children, function(child) {
-      return React.cloneElement(child, { mediaQuery: this._currentMediaQuery() } );
+      if (child !== null) {
+        return React.cloneElement(child, { mediaQuery: this._currentMediaQuery() } );
+      }
     }, this);
     return React.DOM.div(assign({}, this.props, {children: renderedChildren}));
   },
