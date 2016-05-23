@@ -1,6 +1,6 @@
 var React = require('react');
 var MediaListener = require('./media_listener');
-var assign = require('react/lib/Object.assign');
+var assign = require('object-assign');
 
 module.exports = React.createClass({
   displayName: 'MediaQueryable',
